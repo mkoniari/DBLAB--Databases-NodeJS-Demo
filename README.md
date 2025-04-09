@@ -1,10 +1,5 @@
 # Databases-NodeJS-Demo
 
-## Demo created with other Languages and Technologies
-1. [Java](https://github.com/ChristosHadjichristofi/Databases-Java-Demo)
-2. [Python](https://github.com/DimK19/Databases-Python-Demo)
-3. [PHP](https://github.com/cpefkianakis/Databases-PHP-Demo)
-
 ## Dependencies
 1. [NodeJS](https://nodejs.org/en/)
 2. [MySQL for Windows](https://dev.mysql.com/downloads/installer/)
@@ -13,27 +8,25 @@
 1. [express](https://www.npmjs.com/package/express) - minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications
 2. [mysql2](https://www.npmjs.com/package/mysql2) - mysql driver
 3. [ejs](https://www.npmjs.com/package/ejs) - a templating engine
-4. [faker](https://www.npmjs.com/package/faker/v/5.5.3) - to create dummy data
-5. [express-session](https://www.npmjs.com/package/express-session) - Create session middleware
-6. [connect-flash](https://www.npmjs.com/package/connect-flash) - The flash is a special area of the session used for storing messages
 
 ## Optional NodeJS Dependencies
 1. [nodemon](https://www.npmjs.com/package/nodemon) - a command-line interface (CLI) utility developed by @rem that wraps your Node app, watches the file system, and automatically restarts the process
-2. [chalk](https://www.npmjs.com/package/chalk) - style terminal strings 
+2. [chalk](https://www.npmjs.com/package/chalk) - style terminal strings
 3. [custom-env](https://www.npmjs.com/package/custom-env) - configure different environments for your project. For example you can create a file named ```.env.localhost``` and keep the variables when you're in the development phase. Usually used so as to keep credentials safe, so as they don't get uploaded to any hosting platforms that are used for Version Control like GitHub
 
 ### custom-env Example
 1. Create a file named .env.localhost
 2. Import it by using ```require('custom-env').env('localhost');```
-3. ```.env.localhost``` content
-```
-SERVER_PORT=3000
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=dbuser
-DB_PASS=dbpass
-DB=db-name
-```
+3. ```.env.localhost``` content (example from this project):
+```shellscript
+MYSQL_DATABASE=dbdemo
+MYSQL_USER=user
+MYSQL_PASSWORD=password
+MYSQL_PORT=3306
+MYSQL_HOST=mysql
+NODEJS_PORT=3010
+NODE_ENV=development
+
 
 ## Useful Tools
 1. Database Administration Tools like [Dbeaver](https://dbeaver.io/), [Navicat](https://www.navicat.com/en/), [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
@@ -59,15 +52,3 @@ A template engine enables you to use static template files in your application. 
 4. To add a new script open ```package.json```, find scripts and below a script can be added. Usually a ```start script``` is added.<br>
    Example: ```"start": "nodemon server.js"```, if ```nodemon``` is used in the project.<br>
    To use the script execute ```npm start```
-
-## Create Dummy Data
-1. Using the [faker](https://www.npmjs.com/package/faker/v/5.5.3) package dummy data can be created. It can create all kind of data (More on the documentation of the package)
-2. To run the ```creator.js``` script which is located inside ```dummyDataCreator``` folder, run ```npm run create-data```, which is a custom script (custom scripts can be declared in ```package.json``` and can be run with ```npm run <script-name>```)
-
-![landing](https://user-images.githubusercontent.com/40044042/159064916-aac1a816-33ff-4e6f-9e63-45c31c7044a3.png)
-
-![add-student](https://user-images.githubusercontent.com/40044042/159064953-cf6b808a-062a-48c7-b140-67b141b50604.png)
-
-![students](https://user-images.githubusercontent.com/40044042/156389596-a409b129-e9cb-4946-9d9d-47f113c1d8f3.png)
-
-![grades](https://user-images.githubusercontent.com/40044042/156389628-1653aba7-c033-48d0-ac3a-df37374f0d1e.png)

@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "create-data": "node dummyDataCreator/creator.js"
+    "start": "nodemon server.js"
   },
   "author": "Christos Hadjichristofi",
   "license": "ISC",
@@ -14,13 +13,10 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "chalk": "^4.1.1",
-    "connect-flash": "^0.1.1",
+    "chalk": "^4.1.2",
     "custom-env": "^2.0.1",
-    "ejs": "^3.1.7",
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
-    "express-session": "^1.17.2",
-    "faker": "^5.5.3",
     "mysql2": "^2.3.3"
   }
 }
