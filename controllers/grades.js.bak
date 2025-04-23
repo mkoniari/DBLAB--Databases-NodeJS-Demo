@@ -1,6 +1,5 @@
 const { pool } = require('../utils/database');
 
-/* Controller to retrieve grades from database */
 exports.getGrades = (req, res, next) => {
 
     /* check for messages in order to show them when rendering the page */

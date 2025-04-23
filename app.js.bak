@@ -1,7 +1,5 @@
 const express = require('express');
 const path = require('path');
-const session = require('express-session');
-const flash = require('connect-flash');
 
 require('custom-env').env('localhost');
 
@@ -21,14 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-
-app.use(flash());
-
-app.use(session({
-    secret: "ThisShouldBeSecret",
-    resave: false,
-    saveUninitialized: false
-}));
 
 /* Routes used by the project */
 
